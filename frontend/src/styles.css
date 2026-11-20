@@ -1,0 +1,52 @@
+:root {
+  --ink: #14213d; --paper: #f1f4f8; --surface: #fff; --line: #d3dae6;
+  --accent: #0b6e69; --danger: #a4262c; --gold: #b7892b; --muted: #5b667a;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 16px/1.5 "Public Sans", system-ui, sans-serif; }
+h1, h2, h3 { font-family: "Newsreader", Georgia, serif; line-height: 1.2; margin: 0; }
+h2 { font-size: 1.9rem; } h3 { font-size: 1.3rem; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+main.wrap { padding-top: 28px; padding-bottom: 60px; }
+.top { background: var(--ink); color: #fff; }
+.top-in { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 14px; padding-bottom: 0; }
+.top h1 { font-size: 1.35rem; padding-bottom: 14px; }
+.top nav { display: flex; gap: 4px; }
+.top nav button { background: transparent; color: #c9d2e4; border: 0; border-bottom: 3px solid transparent; border-radius: 0; padding: 14px 14px 11px; font-weight: 500; }
+.top nav button.on { color: #fff; border-bottom-color: var(--gold); }
+.stack { display: grid; gap: 20px; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 20px; display: grid; gap: 14px; }
+.row { display: flex; gap: 12px; align-items: end; flex-wrap: wrap; }
+.grow { flex: 1 1 200px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+.grid .full { grid-column: 1 / -1; align-items: center; }
+label { display: grid; gap: 4px; font-size: .875rem; font-weight: 500; }
+input, select { font: inherit; padding: 9px 10px; border: 1px solid var(--line); border-radius: 4px; background: #fff; color: var(--ink); min-width: 0; }
+input[type="checkbox"] { width: 18px; height: 18px; padding: 0; }
+button { font: inherit; font-weight: 500; padding: 9px 16px; border-radius: 4px; border: 1px solid var(--line); background: #fff; color: var(--ink); cursor: pointer; }
+button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+.muted { color: var(--muted); margin: 0; } .small { font-size: .8rem; }
+.mono { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .85em; word-break: break-all; }
+.msg { margin: 0; padding: 10px 12px; border-radius: 4px; border-left: 4px solid; }
+.msg.ok { background: #e4f3f1; border-color: var(--accent); } .msg.err { background: #fbe9ea; border-color: var(--danger); }
+.bar { align-items: center; }
+.scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 4px; }
+table { border-collapse: collapse; width: 100%; font-size: .875rem; }
+th, td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th { background: #e8edf4; font-weight: 600; }
+tr.bad td { background: #fbe9ea; } tr.done td { background: #e4f3f1; }
+.log { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.log li { padding: 10px 12px; border-left: 4px solid var(--line); background: #f7f9fc; word-break: break-word; }
+.log li.ok { border-color: var(--accent); } .log li.error { border-color: var(--danger); } .log li.pending { border-color: var(--gold); }
+.diploma { position: relative; background: var(--surface); border: 1px solid var(--line); outline: 2px solid var(--gold); outline-offset: -10px; padding: 36px 40px; display: grid; gap: 10px; }
+.diploma h3 { font-size: 2.2rem; } .diploma .title { font-family: "Newsreader", Georgia, serif; font-size: 1.35rem; margin: 0; }
+.diploma dl { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 14px 0 0; }
+.diploma dt { font-size: .8rem; color: var(--muted); } .diploma dd { margin: 0; font-weight: 500; }
+.seal { justify-self: start; border: 2px solid var(--accent); color: var(--accent); padding: 4px 14px; border-radius: 999px; font-weight: 600; }
+.diploma.revoked { outline-color: var(--danger); } .diploma.revoked .seal { border-color: var(--danger); color: var(--danger); }
+@media (max-width: 600px) { .diploma { padding: 28px 24px; } h2 { font-size: 1.5rem; } }
+.top p { margin: 0; display: flex; align-items: center; gap: 10px; }
+.top button:not(.primary) { color: var(--ink); }

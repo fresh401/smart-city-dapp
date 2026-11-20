@@ -1,0 +1,41 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\HP\\Documents\\cs project\\smart-city-dapp\\contracts\\UrbanIssueRegistry.sol": {
+      "lastModificationDate": 1795168785258,
+      "contentHash": "c4ba259d3a87e4787eef4ac70928bc3f",
+      "sourceName": "contracts/UrbanIssueRegistry.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.24"
+      ],
+      "artifacts": [
+        "UrbanIssueRegistry"
+      ]
+    }
+  }
+}
